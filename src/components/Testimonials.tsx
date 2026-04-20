@@ -6,7 +6,7 @@ import { testimonials } from "@/data/content";
 
 export default function Testimonials() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-slate-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <span className="text-sm font-semibold uppercase tracking-widest text-coral-500">

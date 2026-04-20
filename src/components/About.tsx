@@ -31,7 +31,7 @@ export default function About() {
                 alt="Preeti Sachdeva"
                 width={400}
                 height={500}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </div>
             <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-2xl bg-coral-100 -z-10" />

@@ -233,6 +233,18 @@ export const blogPosts = [
   },
 ];
 
+export const mediaAppearances = [
+  { label: "Parenting Today Podcast", type: "Podcast" },
+  { label: "Delhi NCR Parenting Summit", type: "Speaker" },
+  { label: "GNIOT Educators Felicitation", type: "Award" },
+  { label: "NLP Mastery Webinar", type: "Webinar" },
+  { label: "Child Psychology Workshop", type: "Workshop" },
+  { label: "Mind & Memory Summit", type: "Speaker" },
+  { label: "Parenting India Awards", type: "Award" },
+  { label: "Digital Parenting Podcast", type: "Podcast" },
+  { label: "Brain Development Seminar", type: "Seminar" },
+];
+
 export const communityBenefits = [
   "Exclusive parenting tips & resources",
   "Live Q&A sessions with Preeti",

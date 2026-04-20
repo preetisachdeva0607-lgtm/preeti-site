@@ -23,13 +23,13 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-20">
           {/* Text */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex-1 text-center lg:text-left"
+            className="flex-1 text-center md:text-left"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-[family-name:var(--font-poppins)] leading-tight tracking-tight">
               Preeti Sachdeva
@@ -43,7 +43,7 @@ export default function Hero() {
             </p>
 
             {/* Badges */}
-            <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-3">
+            <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-3">
               {badges.map(({ Icon, label }, i) => (
                 <motion.span
                   key={label}
@@ -59,7 +59,7 @@ export default function Hero() {
             </div>
 
             {/* CTAs */}
-            <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-4">
+            <div className="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
               <a
                 href={siteConfig.whatsapp}
                 target="_blank"
@@ -82,18 +82,20 @@ export default function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex-shrink-0 w-full max-w-sm lg:max-w-md"
+            className="flex-shrink-0 w-full max-w-xs md:max-w-sm lg:max-w-md"
           >
             <div className="relative">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 relative">
                 <Image
                   src="/images/hero-preeti.jpeg"
                   alt="Preeti Sachdeva - Parenting Coach & DMIT Practitioner"
                   width={400}
                   height={533}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                   priority
                 />
+                {/* Bottom gradient to blend into page */}
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 via-transparent to-transparent" />
               </div>
               {/* Decorative elements */}
               <div className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl border-2 border-coral-500/20 -z-10" />
