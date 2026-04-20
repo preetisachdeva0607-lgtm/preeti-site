@@ -41,7 +41,7 @@ export default function Gallery() {
                 i === 0 ? "md:col-span-2 md:row-span-2" : ""
               } group cursor-pointer`}
             >
-              <div className={`${i === 0 ? "aspect-square" : "aspect-square"} relative`}>
+              <div className="aspect-square relative">
                 <Image
                   src={item.src}
                   alt={item.label}

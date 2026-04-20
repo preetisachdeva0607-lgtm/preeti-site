@@ -26,7 +26,9 @@ export default function Stats() {
       <div className="glass rounded-2xl shadow-xl p-8 sm:p-10">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
           {stats.map((stat, i) => (
-            <StatCard key={stat.label} {...stat} index={i} />
+            <div key={stat.label} className={i === stats.length - 1 && stats.length % 2 !== 0 ? "col-span-2 sm:col-span-1" : ""}>
+              <StatCard {...stat} index={i} />
+            </div>
           ))}
         </div>
       </div>
