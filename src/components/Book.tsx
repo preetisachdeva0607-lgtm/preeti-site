@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ShoppingCart, MessageCircle } from "lucide-react";
+import { ShoppingCart, MessageCircle, BookOpen } from "lucide-react";
 import { books } from "@/data/content";
 
 export default function Book() {
@@ -33,14 +33,24 @@ export default function Book() {
             >
               {/* Cover image */}
               <div className="aspect-[4/3] relative overflow-hidden bg-navy-800">
-                <Image
-                  src={b.cover}
-                  alt={b.title}
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent" />
+                {b.cover ? (
+                  <>
+                    <Image
+                      src={b.cover}
+                      alt={b.title}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent" />
+                  </>
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-coral-500 to-navy-700 flex flex-col items-center justify-center p-8 text-center">
+                    <BookOpen size={48} className="text-white/70" />
+                    <p className="mt-4 text-lg font-bold text-white font-[family-name:var(--font-poppins)]">{b.title}</p>
+                    <p className="mt-1 text-sm text-white/70">{b.subtitle}</p>
+                  </div>
+                )}
               </div>
 
               {/* Info */}

@@ -145,7 +145,7 @@ export const books = [
     publisher: null,
     amazonUrl: "https://wa.me/918920038298",
     audience: "Students",
-    cover: "/images/book-train-your-brain.jpg",
+    cover: null,
     buyLabel: "Order via WhatsApp",
   },
 ];
