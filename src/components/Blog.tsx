@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar } from "lucide-react";
 import { blogPosts } from "@/data/content";
@@ -27,10 +28,14 @@ export default function Blog() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="group rounded-2xl bg-white border border-slate-100 overflow-hidden hover:shadow-lg transition-shadow"
             >
-              <div className="aspect-video bg-gradient-to-br from-navy-50 to-navy-100 flex items-center justify-center">
-                <span className="text-3xl font-bold text-navy-200 font-[family-name:var(--font-poppins)]">
-                  Blog
-                </span>
+              <div className="aspect-video relative overflow-hidden">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-3 text-xs text-slate-500">

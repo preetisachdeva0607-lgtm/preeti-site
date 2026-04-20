@@ -121,18 +121,37 @@ export const wallOfFame = [
   { name: "Sanya G.", age: 17, achievement: "Scholarship Winner", color: "rose" },
 ];
 
-export const book = {
-  title: "The User Manual for Your Mind",
-  subtitle: "An NLP Guide for Teenagers",
-  description:
-    "A practical NLP-based guide designed for teenagers aged 13-18, covering mindset transformation, emotional intelligence, confidence building, and effective communication skills.",
-  price: "499",
-  currency: "INR",
-  publisher: "Amazon KDP",
-  publicationDate: "2026-03-21",
-  amazonUrl: "#",
-  audience: "Teenagers 13-18",
-};
+export const books = [
+  {
+    title: "The User Manual for Your Mind",
+    subtitle: "An NLP Guide for Teenagers",
+    description:
+      "A definitive guide that decodes the teenage brain, offering NLP techniques to handle peer pressure, anxiety, and self-doubt. Perfect for teens looking to master their mindset.",
+    price: "499",
+    currency: "INR",
+    publisher: "Amazon KDP",
+    amazonUrl: "https://a.co/d/0ciNGDEV",
+    audience: "Teenagers 13-18",
+    cover: "/images/hero-preeti.jpeg",
+    buyLabel: "Buy on Amazon",
+  },
+  {
+    title: "Train Your Brain",
+    subtitle: "Memory Enhancement",
+    description:
+      "Practical exercises and proven strategies to boost retention, focus, and recall speed for students tackling demanding curriculums. Unlock your brain's true potential.",
+    price: null,
+    currency: "INR",
+    publisher: null,
+    amazonUrl: "https://wa.me/918920038298",
+    audience: "Students",
+    cover: "/images/book-train-your-brain.jpg",
+    buyLabel: "Order via WhatsApp",
+  },
+];
+
+// Keep backward compat for any component still referencing `book`
+export const book = books[0];
 
 export const pricing = [
   {
@@ -216,6 +235,7 @@ export const blogPosts = [
       "Every child learns differently. Discover the key learning styles and how to identify your child's unique approach to education.",
     date: "2026-03-15",
     category: "Parenting",
+    image: "/images/blog-1.jpg",
   },
   {
     title: "The Power of Positive Reinforcement",
@@ -223,6 +243,7 @@ export const blogPosts = [
       "Learn how positive reinforcement can transform your child's behavior and build lasting self-confidence.",
     date: "2026-03-01",
     category: "Child Psychology",
+    image: "/images/blog-2.jpg",
   },
   {
     title: "Digital Wellness: Screen Time Guidelines for Children",
@@ -230,6 +251,7 @@ export const blogPosts = [
       "Navigate the digital age with evidence-based screen time recommendations for different age groups.",
     date: "2026-02-15",
     category: "Digital Wellness",
+    image: "/images/blog-3.jpg",
   },
 ];
 
