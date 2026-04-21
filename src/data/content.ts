@@ -132,7 +132,7 @@ export const books = [
     publisher: "Amazon KDP",
     amazonUrl: "https://a.co/d/0ciNGDEV",
     audience: "Teenagers 13-18",
-    cover: "/images/hero-preeti.jpeg",
+    cover: "/images/book-user-manual.svg",
     buyLabel: "Buy on Amazon",
   },
   {
@@ -145,7 +145,7 @@ export const books = [
     publisher: null,
     amazonUrl: "https://wa.me/918920038298",
     audience: "Students",
-    cover: null,
+    cover: "/images/book-train-your-brain.svg",
     buyLabel: "Order via WhatsApp",
   },
 ];
