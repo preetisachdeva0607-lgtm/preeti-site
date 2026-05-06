@@ -14,6 +14,9 @@ const typeConfig: Record<string, { icon: React.ElementType; color: string; bg: s
 };
 
 export default function Media() {
+  // Triple the array for seamless infinite scroll
+  const tripleMedia = [...mediaAppearances, ...mediaAppearances, ...mediaAppearances];
+  
   return (
     <section id="media" className="section-padding bg-navy-950 text-white overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -41,7 +44,7 @@ export default function Media() {
               animate={{ x: ["0%", "-50%"] }}
               transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
             >
-              {[...mediaAppearances, ...mediaAppearances].map((item, i) => {
+              {tripleMedia.map((item, i) => {
                 const cfg = typeConfig[item.type] || typeConfig.Workshop;
                 const Icon = cfg.icon;
                 return (

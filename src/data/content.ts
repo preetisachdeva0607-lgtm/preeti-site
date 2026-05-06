@@ -8,7 +8,7 @@ export const siteConfig = {
   social: {
     linkedin: "https://linkedin.com/in/preeti-sachdeva-13435815b",
     facebook: "https://facebook.com/profile.php?id=100069835637863",
-    instagram: "https://instagram.com/preeti.sachdeva.5836",
+    instagram: "https://www.instagram.com/coach.preeti.sachdevaa.5836",
   },
   whatsapp: "https://wa.me/918920038298",
 };
@@ -143,7 +143,7 @@ export const books = [
     price: null,
     currency: "INR",
     publisher: null,
-    amazonUrl: "https://wa.me/918920038298",
+    amazonUrl: "https://wa.me/918920038298?text=Hi%20Preeti%2C%20I'm%20interested%20in%20ordering%20Train%20Your%20Brain%20book",
     audience: "Students",
     cover: "/images/book-train-your-brain.svg",
     buyLabel: "Order via WhatsApp",

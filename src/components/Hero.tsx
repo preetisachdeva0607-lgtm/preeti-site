@@ -69,6 +69,14 @@ export default function Hero() {
                 Book a Session
               </a>
               <a
+                href={siteConfig.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-full border-2 border-white/30 px-8 py-3.5 text-base font-semibold text-white hover:bg-white/10 transition-all"
+              >
+                Free 15-min Consultation
+              </a>
+              <a
                 href="#books"
                 className="rounded-full border-2 border-white/30 px-8 py-3.5 text-base font-semibold text-white hover:bg-white/10 transition-all"
               >
@@ -87,7 +95,7 @@ export default function Hero() {
             <div className="relative">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 relative">
                 <Image
-                  src="/images/hero-preeti.jpeg"
+                  src="/images/hero-preeti.jpg"
                   alt="Preeti Sachdeva - Parenting Coach & DMIT Practitioner"
                   width={400}
                   height={533}

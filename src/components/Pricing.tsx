@@ -89,6 +89,17 @@ export default function Pricing() {
             </motion.div>
           ))}
         </div>
+      {/* Free consultation banner */}
+        <div className="mt-8 text-center">
+          <a
+            href={siteConfig.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-coral-100 px-6 py-3 text-sm font-semibold text-coral-700 hover:bg-coral-200 transition-colors"
+          >
+            Not sure which plan? Book a Free 15-min Consultation
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -27,7 +27,7 @@ export default function About() {
           >
             <div className="aspect-[4/5] rounded-2xl overflow-hidden">
               <Image
-                src="/images/about-preeti.jpeg"
+                src="/images/hero-preeti.jpg"
                 alt="Preeti Sachdeva"
                 width={400}
                 height={500}

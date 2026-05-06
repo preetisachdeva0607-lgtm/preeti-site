@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import FloatingButtons from "@/components/FloatingButtons";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
+import GoogleReviews from "@/components/GoogleReviews";
 import About from "@/components/About";
 import Services from "@/components/Services";
 import Book from "@/components/Book";
@@ -22,6 +23,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Stats />
+      <GoogleReviews />
       <About />
       <Services />
       <Book />
