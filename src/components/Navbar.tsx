@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { navLinks, siteConfig } from "@/data/content";
@@ -27,7 +26,7 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <a href="#" className="flex items-center gap-3 text-white">
-            <Image
+            <img
               src="/images/logo.jpg"
               alt="PreetiMindLab Logo"
               width={40}
