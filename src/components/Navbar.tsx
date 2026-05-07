@@ -1,5 +1,4 @@
-"use client";
-
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { navLinks, siteConfig } from "@/data/content";
@@ -27,8 +26,17 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <a href="#" className="text-xl font-bold text-white font-[family-name:var(--font-poppins)]">
-            {siteConfig.name}
+          <a href="#" className="flex items-center gap-3 text-white">
+            <Image
+              src="/images/logo.jpg"
+              alt="PreetiMindLab Logo"
+              width={40}
+              height={40}
+              className="rounded-full"
+            />
+            <span className="text-xl font-bold font-[family-name:var(--font-poppins)]">
+              {siteConfig.name}
+            </span>
           </a>
 
           {/* Desktop nav */}
