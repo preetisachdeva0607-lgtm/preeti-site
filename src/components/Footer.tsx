@@ -11,7 +11,7 @@ export default function Footer() {
               {siteConfig.name}
             </h3>
             <p className="mt-3 text-sm text-slate-400 leading-relaxed max-w-xs">
-              {siteConfig.tagline}. Certified Parenting Coach & DMIT Practitioner
+              {siteConfig.tagline}. Certified Parenting Coach & CogniPrint Analyst
               helping families thrive.
             </p>
           </div>

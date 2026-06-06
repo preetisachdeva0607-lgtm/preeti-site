@@ -7,7 +7,7 @@ import { siteConfig } from "@/data/content";
 
 const badges = [
   { Icon: GraduationCap, label: "Parenting Coach" },
-  { Icon: Brain, label: "DMIT Practitioner" },
+  { Icon: Brain, label: "CogniPrint Analyst" },
   { Icon: BookOpen, label: "Educator" },
   { Icon: Lightbulb, label: "NLP Coach" },
 ];
@@ -38,7 +38,7 @@ export default function Hero() {
               {siteConfig.tagline}
             </p>
             <p className="mt-4 text-lg text-navy-300/90 max-w-xl">
-              Certified Parenting Coach, DMIT Practitioner, Educator & NLP Coach
+              Certified Parenting Coach, CogniPrint Analyst, Educator & NLP Coach
               with 15+ years of experience
             </p>
 
@@ -96,7 +96,7 @@ export default function Hero() {
               <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 relative">
                 <Image
                   src="/images/hero-preeti.jpg"
-                  alt="Preeti Sachdeva - Parenting Coach & DMIT Practitioner"
+                  alt="Preeti Sachdeva - Parenting Coach & CogniPrint Analyst"
                   width={400}
                   height={533}
                   className="w-full h-full object-cover object-top"
