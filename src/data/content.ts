@@ -84,7 +84,7 @@ export const awards = [
     year: "2020",
   },
   {
-    title: "DMIT Practitioner Certification",
+    title: "CogniPrint Analyst Certification",
     org: "Brain Mapping Academy",
     year: "2019",
   },
