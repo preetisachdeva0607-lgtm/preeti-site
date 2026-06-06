@@ -1,14 +1,14 @@
 export const siteConfig = {
-  name: "PreetiMindLab",
-  tagline: "Empowering Minds, Transforming Lives",
+  name: "Student Success Academy",
+  tagline: "Empower • Educate • Evolve",
   phone: "+918920038298",
-  email: "preetimindlab@gmail.com",
+  email: "studentsuccessacademy@gmail.com",
   address: "Senior Citizen Society, Greater Noida, Uttar Pradesh, India",
   hours: "Monday - Saturday, 9:00 AM - 7:00 PM",
   social: {
     linkedin: "https://linkedin.com/in/preeti-sachdeva-13435815b",
     facebook: "https://facebook.com/profile.php?id=100069835637863",
-    instagram: "https://www.instagram.com/coach.preeti.sachdevaa.5836",
+    instagram: "https://www.instagram.com/studentsuccessacademy.in",
   },
   whatsapp: "https://wa.me/918920038298",
 };
@@ -28,7 +28,7 @@ export const navLinks = [
 
 export const heroBadges = [
   { icon: "GraduationCap", label: "Parenting Coach" },
-  { icon: "Brain", label: "DMIT Practitioner" },
+  { icon: "Brain", label: "CogniPrint Analyst" },
   { icon: "BookOpen", label: "Educator" },
   { icon: "Lightbulb", label: "NLP Coach" },
 ];
@@ -42,11 +42,11 @@ export const stats = [
 ];
 
 export const aboutText = {
-  heading: "About Preeti Sachdeva",
+  heading: "About Student Success Academy",
   paragraphs: [
-    "With over 15 years of dedicated experience in child psychology, positive parenting, and NLP coaching, Preeti Sachdeva has been transforming lives across the Delhi NCR region.",
-    "As a certified DMIT practitioner and parenting coach, she specializes in helping parents understand their children's innate potential through Multiple Intelligence profiling, personalized counselling, and evidence-based parenting strategies.",
-    "Her mission is to empower every parent with the tools and knowledge to nurture confident, resilient, and emotionally intelligent children.",
+    "With over 15 years of dedicated experience in child psychology, positive parenting, and NLP coaching, Student Success Academy has been transforming lives across the Delhi NCR region.",
+    "As a certified CogniPrint analyst and parenting coach, we specialize in helping parents understand their children's innate potential through Multiple Intelligence profiling, personalized counselling, and evidence-based parenting strategies.",
+    "Our mission is to empower every student with the tools and knowledge to nurture confident, resilient, and emotionally intelligent minds.",
   ],
 };
 
@@ -203,12 +203,12 @@ export const pricing = [
 export const testimonials = [
   {
     name: "Meera Sharma",
-    text: "Preeti ma'am completely changed our approach to parenting. Our son is now more confident and focused than ever before.",
+    text: "Student Success Academy completely changed our approach to parenting. Our son is now more confident and focused than ever before.",
     rating: 5,
   },
   {
     name: "Rajesh Gupta",
-    text: "The DMIT analysis was eye-opening. We finally understood our daughter's unique strengths and how to support her learning.",
+    text: "The CogniPrint analysis was eye-opening. We finally understood our daughter's unique strengths and how to support her learning.",
     rating: 5,
   },
   {
@@ -218,12 +218,12 @@ export const testimonials = [
   },
   {
     name: "Amit Patel",
-    text: "Memory enhancement sessions transformed my child's academic performance. Highly recommend PreetiMindLab!",
+    text: "Memory enhancement sessions transformed my child's academic performance. Highly recommend Student Success Academy!",
     rating: 5,
   },
   {
     name: "Kavita Singh",
-    text: "Professional, caring, and deeply knowledgeable. Preeti ma'am is a blessing for parents in Greater Noida.",
+    text: "Professional, caring, and deeply knowledgeable. The team at Student Success Academy is a blessing for parents in Greater Noida.",
     rating: 5,
   },
 ];
@@ -269,7 +269,7 @@ export const mediaAppearances = [
 
 export const communityBenefits = [
   "Exclusive parenting tips & resources",
-  "Live Q&A sessions with Preeti",
+  "Live Q&A sessions with our experts",
   "Expert guidance on child development",
   "Supportive community of parents",
 ];

@@ -16,23 +16,24 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "PreetiMindLab | Parenting Coach & DMIT Practitioner - Greater Noida",
+  title: "Student Success Academy | CogniPrint Analysis & Coaching - Greater Noida",
   description:
-    "Certified Parenting Coach, DMIT Practitioner, Educator & NLP Coach with 15+ years of experience transforming lives through parenting coaching, multiple intelligence analysis, and NLP coaching in Greater Noida.",
+    "Certified CogniPrint Analyst, Parenting Coach, Educator & NLP Coach with 15+ years of experience transforming lives through psychometric assessment, parenting coaching, and NLP coaching in Greater Noida.",
   keywords: [
+    "CogniPrint analysis",
     "parenting coach",
-    "DMIT practitioner",
+    "psychometric assessment",
     "NLP coach",
     "child psychology",
     "Greater Noida",
     "parenting workshops",
     "memory enhancement",
-    "CogniPrint",
+    "Student Success Academy",
   ],
   openGraph: {
-    title: "PreetiMindLab | Parenting Coach & DMIT Practitioner",
+    title: "Student Success Academy | CogniPrint Analysis & Coaching",
     description:
-      "Empowering Minds, Transforming Lives. 15+ years of experience in parenting coaching and DMIT analysis.",
+      "Empower • Educate • Evolve. 15+ years of experience in psychometric assessment and parenting coaching.",
     type: "website",
     locale: "en_IN",
     url: "https://preeti.khattars.us",
@@ -42,9 +43,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "PreetiMindLab",
+  name: "Student Success Academy",
   description:
-    "Certified Parenting Coach, DMIT Practitioner, Educator & NLP Coach",
+    "Certified CogniPrint Analyst, Parenting Coach, Educator & NLP Coach",
   url: "https://preeti.khattars.us",
   telephone: "+918920038298",
   address: {
