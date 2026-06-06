@@ -30,7 +30,7 @@ export default function Navbar() {
           <a href="#" className="flex items-center gap-3 text-white">
             <img
               src="/images/logo.jpg"
-              alt="PreetiMindLab Logo"
+              alt="Student Success Academy Logo"
               width={40}
               height={40}
               className="rounded-full"

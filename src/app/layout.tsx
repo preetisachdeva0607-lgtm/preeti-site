@@ -37,6 +37,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: "https://preeti.khattars.us",
+    images: [{
+      url: "https://preeti.khattars.us/images/logo.jpg",
+      width: 800,
+      height: 800,
+      alt: "Student Success Academy Logo"
+    }]
+  },
+  icons: {
+    icon: "/images/logo.jpg",
+    apple: "/images/logo.jpg",
   },
 };
 
