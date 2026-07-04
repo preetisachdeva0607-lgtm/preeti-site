@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import fs from "fs";
+import path from "path";
 
 export const dynamic = "force-static";
 
@@ -12,8 +14,42 @@ interface Review {
   approved: boolean;
 }
 
-// In-memory storage (will persist during runtime)
-let reviews: Review[] = [];
+const DATA_FILE = path.join(process.cwd(), "data", "reviews.json");
+
+// Ensure data directory exists
+function ensureDataDir() {
+  const dir = path.dirname(DATA_FILE);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+}
+
+// Load reviews from file
+function loadReviews(): Review[] {
+  try {
+    ensureDataDir();
+    if (fs.existsSync(DATA_FILE)) {
+      const data = fs.readFileSync(DATA_FILE, "utf-8");
+      return JSON.parse(data);
+    }
+  } catch (error) {
+    console.error("Error loading reviews:", error);
+  }
+  return [];
+}
+
+// Save reviews to file
+function saveReviews(reviews: Review[]) {
+  try {
+    ensureDataDir();
+    fs.writeFileSync(DATA_FILE, JSON.stringify(reviews, null, 2));
+  } catch (error) {
+    console.error("Error saving reviews:", error);
+  }
+}
+
+// Initialize reviews from file
+let reviews: Review[] = loadReviews();
 
 export async function POST(request: Request) {
   try {
@@ -38,6 +74,7 @@ export async function POST(request: Request) {
     };
 
     reviews.push(review);
+    saveReviews(reviews);
 
     return NextResponse.json(
       { message: "Review submitted successfully", review },
@@ -55,12 +92,13 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const admin = searchParams.get("admin");
   
+  // Reload from file to get latest data
+  reviews = loadReviews();
+  
   if (admin === "true") {
-    // Return all reviews including pending (for admin)
     return NextResponse.json(reviews);
   }
   
-  // Return only approved reviews (for public)
   const approvedReviews = reviews.filter((r) => r.approved);
   return NextResponse.json(approvedReviews);
 }
@@ -70,6 +108,9 @@ export async function PUT(request: Request) {
     const body = await request.json();
     const { id, approved } = body;
 
+    // Reload from file
+    reviews = loadReviews();
+    
     const review = reviews.find((r) => r.id === id);
     if (!review) {
       return NextResponse.json(
@@ -79,6 +120,8 @@ export async function PUT(request: Request) {
     }
 
     review.approved = approved;
+    saveReviews(reviews);
+    
     return NextResponse.json({ message: "Review updated", review });
   } catch (error) {
     return NextResponse.json(
@@ -100,7 +143,11 @@ export async function DELETE(request: Request) {
       );
     }
 
+    // Reload from file
+    reviews = loadReviews();
     reviews = reviews.filter((r) => r.id !== id);
+    saveReviews(reviews);
+    
     return NextResponse.json({ message: "Review deleted" });
   } catch (error) {
     return NextResponse.json(
