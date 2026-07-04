@@ -1,19 +1,49 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Star, Quote, Send, CheckCircle } from "lucide-react";
-import { testimonials } from "@/data/content";
+import { Star, Quote, Send, CheckCircle, RefreshCw } from "lucide-react";
+
+interface Review {
+  id: string;
+  name: string;
+  email: string;
+  rating: number;
+  text: string;
+  date: string;
+  approved: boolean;
+}
 
 export default function Testimonials() {
   const [showForm, setShowForm] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [reviews, setReviews] = useState<Review[]>([]);
+  const [loading, setLoading] = useState(true);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     rating: 5,
     text: "",
   });
+
+  // Fetch approved reviews on mount
+  useEffect(() => {
+    fetchReviews();
+  }, []);
+
+  const fetchReviews = async () => {
+    try {
+      const response = await fetch('/api/reviews');
+      if (response.ok) {
+        const data = await response.json();
+        setReviews(data);
+      }
+    } catch (error) {
+      console.error('Error fetching reviews:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,6 +69,16 @@ export default function Testimonials() {
       console.error('Error submitting review:', error);
       alert('Something went wrong. Please try again.');
     }
+  };
+
+  const renderStars = (rating: number) => {
+    return Array.from({ length: 5 }).map((_, i) => (
+      <Star
+        key={i}
+        size={14}
+        className={i < rating ? "fill-amber-400 text-amber-400" : "text-slate-300"}
+      />
+    ));
   };
 
   return (
@@ -112,7 +152,7 @@ export default function Testimonials() {
 
                   {/* Name */}
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">Your Name</label>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">Your Name *</label>
                     <input
                       type="text"
                       required
@@ -137,7 +177,7 @@ export default function Testimonials() {
 
                   {/* Review Text */}
                   <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">Your Review</label>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">Your Review *</label>
                     <textarea
                       required
                       rows={4}
@@ -162,38 +202,50 @@ export default function Testimonials() {
           </motion.div>
         )}
 
-        {/* Existing Testimonials */}
-        <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
-            <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
-            >
-              <Quote size={24} className="text-navy-200" />
-              <p className="mt-4 text-slate-600 leading-relaxed">{t.text}</p>
-              <div className="mt-4 flex items-center gap-1">
-                {Array.from({ length: t.rating }).map((_, j) => (
-                  <Star
-                    key={j}
-                    size={14}
-                    className="fill-amber-400 text-amber-400"
-                  />
-                ))}
-              </div>
-              <div className="mt-3 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-navy-100 flex items-center justify-center">
-                  <span className="text-sm font-bold text-navy-700">
-                    {t.name.charAt(0)}
-                  </span>
-                </div>
-                <span className="font-medium text-slate-900">{t.name}</span>
-              </div>
-            </motion.div>
-          ))}
+        {/* Reviews Display */}
+        <div className="mt-12">
+          {loading ? (
+            <div className="text-center py-12">
+              <RefreshCw size={32} className="mx-auto animate-spin text-coral-500" />
+              <p className="mt-4 text-slate-600">Loading reviews...</p>
+            </div>
+          ) : reviews.length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {reviews.map((review, i) => (
+                <motion.div
+                  key={review.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="rounded-2xl bg-white p-6 shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
+                >
+                  <Quote size={24} className="text-navy-200" />
+                  <p className="mt-4 text-slate-600 leading-relaxed">{review.text}</p>
+                  <div className="mt-4 flex items-center gap-1">
+                    {renderStars(review.rating)}
+                  </div>
+                  <div className="mt-3 flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-navy-100 flex items-center justify-center">
+                      <span className="text-sm font-bold text-navy-700">
+                        {review.name.charAt(0)}
+                      </span>
+                    </div>
+                    <div>
+                      <span className="font-medium text-slate-900">{review.name}</span>
+                      <p className="text-xs text-slate-500">
+                        {new Date(review.date).toLocaleDateString()}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-slate-600">No reviews yet. Be the first to share your experience!</p>
+            </div>
+          )}
         </div>
       </div>
     </section>
