@@ -14,6 +14,13 @@ const galleryItems = [
   { src: "/images/gallery-8.jpeg", label: "Recognition Ceremony" },
   { src: "/images/gallery-9.jpeg", label: "Media Feature" },
   { src: "/images/gallery-10.jpeg", label: "Training Event" },
+  { src: "/images/achievement-1.jpg", label: "Educator Excellence Award — GIMS" },
+  { src: "/images/achievement-2.jpg", label: "GIMS Marketing Conclave" },
+  { src: "/images/achievement-3.jpg", label: "Certificate & Award Recognition" },
+  { src: "/images/achievement-4.jpg", label: "Award Ceremony" },
+  { src: "/images/achievement-5.jpg", label: "Receiving Recognition on Stage" },
+  { src: "/images/achievement-6.jpg", label: "Felicitation Ceremony" },
+  { src: "/images/achievement-7.jpg", label: "Celebrating Achievement" },
 ];
 
 export default function Gallery() {
