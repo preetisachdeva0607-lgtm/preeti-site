@@ -5,6 +5,7 @@ import Stats from "@/components/Stats";
 import GoogleReviews from "@/components/GoogleReviews";
 import About from "@/components/About";
 import Services from "@/components/Services";
+import Phonics from "@/components/Phonics";
 import Book from "@/components/Book";
 import Pricing from "@/components/Pricing";
 import Awards from "@/components/Awards";
@@ -26,6 +27,7 @@ export default function Home() {
       <GoogleReviews />
       <About />
       <Services />
+      <Phonics />
       <Book />
       <Pricing />
       <Awards />
