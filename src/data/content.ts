@@ -202,6 +202,31 @@ export const pricing = [
 
 export const testimonials = [
   {
+    name: "Puneet Kaur",
+    text: "Very grateful to be in contact with an inspiring person who is transforming children and their lives with great effectiveness. With her efforts and guidance she has always been an inspiration as a coach for me. Thank you so much Ma'am.",
+    rating: 5,
+  },
+  {
+    name: "Jagruti Gouda",
+    text: "It's best services here with Students Succes Academy",
+    rating: 5,
+  },
+  {
+    name: "Subodh Langde",
+    text: "Being part of DEEP Parenting, i am surely recommend for any parenting related services",
+    rating: 5,
+  },
+  {
+    name: "Nidhi Meher",
+    text: "Preeti is such a sweet, warm, and approachable person who is genuinely dedicated to helping others. Her kind nature and passion for her work make a real difference in the community. Wishing her and Student Success Academy all the best!",
+    rating: 5,
+  },
+  {
+    name: "Mubashira Begum",
+    text: "Preeti ma'am is an excellent Educator. Her personalized guidance and strategies to educate children are commendable. I highly recommend Student Success Academy to all parents. Thank you 😊",
+    rating: 5,
+  },
+  {
     name: "Meera Sharma",
     text: "Student Success Academy completely changed our approach to parenting. Our son is now more confident and focused than ever before.",
     rating: 5,
