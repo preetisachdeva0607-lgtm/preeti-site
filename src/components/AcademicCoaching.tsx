@@ -28,7 +28,11 @@ export default function AcademicCoaching() {
             <ul className="space-y-3 text-slate-700">
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">✓</span>
-                <span>Coaching for students of Classes 1 to 8</span>
+                <span>Classes 1 to 5: all subjects</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-500 mr-2">✓</span>
+                <span>Classes 6 to 8: Maths, Science, English and Social Science</span>
               </li>
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">✓</span>
@@ -47,6 +51,7 @@ export default function AcademicCoaching() {
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">Classes 1–8</span>
               <span className="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-semibold">CBSE</span>
               <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-semibold">Online &amp; Offline</span>
+              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">Mon–Sat</span>
             </div>
           </motion.div>
 
@@ -57,9 +62,25 @@ export default function AcademicCoaching() {
             transition={{ duration: 0.5 }}
             className="bg-gradient-to-br from-orange-50 to-teal-50 rounded-2xl p-6 shadow-lg flex flex-col justify-center"
           >
-            <h3 className="text-xl font-bold text-teal-700 mb-4">💰 Fee Enquiries</h3>
-            <p className="text-slate-600 mb-6">
-              Message us on WhatsApp for fee details, batch timings and to choose online or offline classes.
+            <h3 className="text-xl font-bold text-teal-700 mb-4">📅 Subjects &amp; Batch Schedule</h3>
+            <div className="space-y-4">
+              <div className="bg-white/70 rounded-xl p-4">
+                <p className="text-lg font-bold text-slate-900">Classes 1 to 5</p>
+                <p className="text-sm text-slate-600 mt-1">Subjects: All subjects</p>
+                <p className="text-xl font-bold text-orange-600 mt-1">4:00 PM – 5:00 PM IST</p>
+              </div>
+              <div className="bg-white/70 rounded-xl p-4">
+                <p className="text-lg font-bold text-slate-900">Classes 6 to 8</p>
+                <p className="text-sm text-slate-600 mt-1">Subjects: Maths, Science, English, Social Science</p>
+                <p className="text-xl font-bold text-orange-600 mt-1">7:00 PM – 8:00 PM IST</p>
+              </div>
+              <div>
+                <p className="text-sm text-slate-600">Class Days</p>
+                <p className="text-2xl font-bold text-teal-800">Monday to Saturday</p>
+              </div>
+            </div>
+            <p className="text-slate-600 mt-6 mb-4 pt-4 border-t border-teal-200">
+              Message us on WhatsApp for fee details and to choose online or offline classes.
             </p>
             <a
               href="https://wa.me/918920038298?text=Hi%20Preeti!%20I'm%20interested%20in%20Academic%20Coaching%20(CBSE%2C%20Classes%201-8).%20Please%20share%20the%20fee%20details%20for%20online%2Foffline%20classes."
