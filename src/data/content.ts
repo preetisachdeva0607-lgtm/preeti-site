@@ -11,6 +11,7 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/studentsuccessacademy.in",
   },
   whatsapp: "https://wa.me/918920038298",
+  googleReviews: "https://www.google.com/maps?cid=1863905914758979068",
 };
 
 export const navLinks = [
@@ -40,7 +41,7 @@ export const stats = [
   { value: 1000, suffix: "+", label: "Lives Transformed" },
   { value: 50, suffix: "+", label: "Certifications & Awards" },
   { value: 100, suffix: "%", label: "Satisfaction Rate" },
-  { value: 5, suffix: "/5", label: "Google Rating" },
+  { value: 4.9, suffix: "/5", label: "Google Rating" },
 ];
 
 export const aboutText = {

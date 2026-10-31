@@ -5,7 +5,7 @@ export default function GoogleReviews() {
     <section className="py-8 bg-white border-y border-slate-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <a
-          href="https://g.co/kgs/gsPFCbw"
+          href={siteConfig.googleReviews}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-3 text-slate-600 hover:text-slate-900 transition-colors group"
@@ -21,10 +21,10 @@ export default function GoogleReviews() {
               </svg>
             ))}
           </div>
-          <span className="font-semibold">5.0</span>
+          <span className="font-semibold">4.9</span>
           <span className="text-sm">Google Rating</span>
           <span className="text-sm text-coral-500 group-hover:underline">
-            Read 50+ reviews →
+            Read our Google reviews →
           </span>
         </a>
       </div>
