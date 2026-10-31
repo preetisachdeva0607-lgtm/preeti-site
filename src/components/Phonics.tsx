@@ -65,13 +65,13 @@ export default function Phonics() {
               </div>
               <div>
                 <p className="text-sm text-slate-600">Class Time</p>
-                <p className="text-2xl font-bold text-orange-600">4:00 PM – 5:00 PM IST</p>
+                <p className="text-2xl font-bold text-orange-600">3:00 PM – 4:00 PM IST</p>
               </div>
               <div className="pt-4 border-t border-teal-200">
                 <p className="text-sm text-slate-600 mb-2">For ages 3–5, the class may run for 45 minutes.</p>
                 <p className="text-sm text-slate-600 mb-4">Sunday trial, demo and makeup classes are available.</p>
                 <a
-                  href="https://wa.me/918920038298?text=Hi%20Preeti!%20I'm%20interested%20in%20the%20one-year%20Phonics%20Sounds%20Course%20for%20children%20aged%203-9.%20Please%20share%20the%20Tuesday%2C%20Thursday%20and%20Saturday%204-5%20PM%20IST%20batch%20details."
+                  href="https://wa.me/918920038298?text=Hi%20Preeti!%20I'm%20interested%20in%20the%20one-year%20Phonics%20Sounds%20Course%20for%20children%20aged%203-9.%20Please%20share%20the%20Tuesday%2C%20Thursday%20and%20Saturday%203-4%20PM%20IST%20batch%20details."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors"
