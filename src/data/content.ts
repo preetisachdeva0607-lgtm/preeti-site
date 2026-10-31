@@ -12,6 +12,7 @@ export const siteConfig = {
   },
   whatsapp: "https://wa.me/918920038298",
   googleReviews: "https://www.google.com/maps?cid=1863905914758979068",
+  googleWriteReview: "https://search.google.com/local/writereview?placeid=ChIJr4cy4FnBDDkR_F31143s3Rk",
 };
 
 export const navLinks = [
