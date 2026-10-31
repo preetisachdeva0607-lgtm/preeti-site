@@ -14,6 +14,8 @@ export const siteConfig = {
 };
 
 export const navLinks = [
+  { label: "Phonics Sounds", href: "#phonics" },
+  { label: "Academic Coaching", href: "#academic-coaching" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Awards", href: "#awards" },

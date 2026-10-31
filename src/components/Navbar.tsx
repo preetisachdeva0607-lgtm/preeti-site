@@ -35,36 +35,29 @@ export default function Navbar() {
               height={40}
               className="rounded-full"
             />
-            <span className="text-xl font-bold font-[family-name:var(--font-poppins)]">
+            <span className="text-xl leading-tight font-bold font-[family-name:var(--font-poppins)] xl:max-w-44">
               {siteConfig.name}
             </span>
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-6">
+          {/* "Book a Session" lives in FloatingButtons on desktop to leave room for the links */}
+          <div className="hidden xl:flex items-center gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-white/80 hover:text-white transition-colors"
+                className="text-sm whitespace-nowrap text-white/80 hover:text-white transition-colors"
               >
                 {link.label}
               </a>
             ))}
-            <a
-              href={siteConfig.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-coral-500 px-5 py-2 text-sm font-semibold text-white hover:bg-coral-600 transition-colors"
-            >
-              Book a Session
-            </a>
           </div>
 
           {/* Mobile toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-white p-2"
+            className="xl:hidden text-white p-2"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -74,7 +67,7 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       {isOpen && (
-        <div className="lg:hidden glass-dark border-t border-white/10">
+        <div className="xl:hidden glass-dark border-t border-white/10">
           <div className="px-4 py-4 space-y-2">
             {navLinks.map((link) => (
               <a
